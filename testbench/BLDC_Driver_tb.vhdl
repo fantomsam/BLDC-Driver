@@ -9,7 +9,10 @@ architecture behav of BLDC_Driver_tb is
    --  Declaration of the component that will be instantiated.
    component BLDC_Driver
 	 port (
-		      Dir : in std_logic;
+		      Dir : in std_logic; -- Motor direction, '0'= CW '1'=CCW
+		      PWM : in std_logic; -- Output Chopping input
+		      DR_en : in std_logic; -- Enable the EN lines
+		      Brake : in std_logic; -- Brake the motor by short the inputs 
 		      Hall_sens : in std_logic_vector(2 downto 0);
 		      En : out std_logic_vector(2 downto 0);
 		      Dr : out std_logic_vector(2 downto 0)
@@ -34,6 +37,9 @@ architecture behav of BLDC_Driver_tb is
    S_c_0: BLDC_Driver
    port map (
    					Dir => Dir,
+   					PWM => '1',
+   					Brake => '0',
+   					DR_en => '1',
 						Hall_sens => Hall_sens,
 						En => En,
 						Dr => Dr
