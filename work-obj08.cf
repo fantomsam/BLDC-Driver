@@ -1,0 +1,7 @@
+v 4
+file . "testbench/BLDC_Driver_tb.vhdl" "c4fb880bf9a4aaa2238d1527f08255c451cb2f55" "20180616170725.133":
+  entity bldc_driver_tb at 1( 0) + 0 on 11;
+  architecture behav of bldc_driver_tb at 8( 120) + 0 on 12;
+file . "source/BLDC_Driver.vhdl" "053f0f70f2ca6e13e5de110186d1b559cbd16ad5" "20180616170725.133":
+  entity bldc_driver at 1( 0) + 0 on 13;
+  architecture behavioral of bldc_driver at 14( 310) + 0 on 14;
