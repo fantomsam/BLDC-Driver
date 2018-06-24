@@ -17,7 +17,7 @@ end BLDC_Driver;
 architecture behavioral of BLDC_Driver is
 signal s_Dr,s_EN : std_logic_vector(2 downto 0);
 begin
-    process(Hall_sens)
+    process(Hall_sens,Dir)
     begin
       case (Hall_sens) is
       	when "101" => s_EN <= "110"; s_Dr <= "100" when Dir = '0' else "011";
